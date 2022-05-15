@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Todo } from '../../model';
-import style from './style.module.css';
+import style from '../style.module.css';
 import { FiEdit3 } from 'react-icons/fi';
 import { AiOutlineDelete } from 'react-icons/ai';
 import { MdOutlineDone } from 'react-icons/md';

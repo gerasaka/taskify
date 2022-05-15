@@ -1,7 +1,8 @@
 import React from 'react';
-import style from './style.module.css';
+import style from '../style.module.css';
 import { Todo } from '../../model';
 import TodoCard from '../TodoCard';
+
 interface Props {
   todoList: Todo[];
   setTodoList: React.Dispatch<React.SetStateAction<Todo[]>>;

@@ -16,9 +16,6 @@ const App: React.FC = () => {
     }
   };
 
-  console.log(todo);
-  console.log(todoList);
-
   return (
     <div className='App'>
       <span className='heading'>Taskify</span>

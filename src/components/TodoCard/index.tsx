@@ -20,6 +20,10 @@ const TodoCard: React.FC<Props> = ({ todo, todoList, setTodoList }) => {
     );
   };
 
+  const hanleDelete = (id: number) => {
+    setTodoList(todoList.filter(todo => todo.id !== id));
+  };
+
   return (
     <form className={style.todo__single}>
       {todo.isDone ? (
@@ -31,7 +35,7 @@ const TodoCard: React.FC<Props> = ({ todo, todoList, setTodoList }) => {
         <span className={style.icon}>
           <FiEdit3 />
         </span>
-        <span className={style.icon}>
+        <span className={style.icon} onClick={() => hanleDelete(todo.id)}>
           <AiOutlineDelete />
         </span>
         <span className={style.icon} onClick={() => handleDone(todo.id)}>

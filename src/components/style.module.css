@@ -76,3 +76,23 @@
 .todo__single_text:focus {
   outline: none;
 }
+
+@media (max-width: 1200px) {
+  .todo__single {
+    width: 40%;
+  }
+}
+
+@media (max-width: 700px) {
+  .input {
+    width: 95%;
+  }
+
+  .todoList {
+    width: 95%;
+  }
+
+  .todo__single {
+    width: 100%;
+  }
+}

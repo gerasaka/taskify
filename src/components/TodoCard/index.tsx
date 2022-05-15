@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Todo } from '../../model';
 import style from './style.module.css';
 import { FiEdit3 } from 'react-icons/fi';
@@ -38,10 +38,17 @@ const TodoCard: React.FC<Props> = ({ todo, todoList, setTodoList }) => {
     setEdit(false);
   };
 
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, [edit]);
+
   return (
     <form className={style.todo__single} onSubmit={e => handleEdit(e, todo.id)}>
       {edit ? (
         <input
+          ref={inputRef}
           value={editTodo}
           className={style.todo__single_text}
           onChange={e => setEditTodo(e.target.value)}
